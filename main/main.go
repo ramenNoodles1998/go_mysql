@@ -6,6 +6,7 @@ import (
 
    	_ "github.com/go-sql-driver/mysql"
 
+    "Golang.com/go_mysql/db"
 )
 
 type Tag struct {
@@ -15,6 +16,8 @@ type Tag struct {
 
 func main() {
     fmt.Println("Go MySQL Tutorial")
+
+    fmt.Println(db.Db)
 
     db, err := sql.Open("mysql", "root:roman123456@tcp(127.0.0.1:3306)/test")
 
